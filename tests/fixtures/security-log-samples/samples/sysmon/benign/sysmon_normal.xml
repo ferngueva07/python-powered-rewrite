@@ -1,0 +1,47 @@
+<Events>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2024-01-15T09:00:01.000Z"/>
+      <Computer>DESKTOP-ALICE</Computer>
+    </System>
+    <EventData>
+      <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+      <Data Name="CommandLine">chrome.exe --no-first-run</Data>
+      <Data Name="User">CORP\alice</Data>
+      <Data Name="Hashes">MD5=D41D8CD98F00B204E9800998ECF8427E,SHA256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</Data>
+      <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>3</EventID>
+      <TimeCreated SystemTime="2024-01-15T09:00:10.000Z"/>
+      <Computer>DESKTOP-ALICE</Computer>
+    </System>
+    <EventData>
+      <Data Name="Image">C:\Program Files\Google\Chrome\Application\chrome.exe</Data>
+      <Data Name="User">CORP\alice</Data>
+      <Data Name="SourceIp">10.0.0.10</Data>
+      <Data Name="DestinationIp">198.51.100.17</Data>
+      <Data Name="DestinationPort">443</Data>
+      <Data Name="Protocol">tcp</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>22</EventID>
+      <TimeCreated SystemTime="2024-01-15T09:00:05.000Z"/>
+      <Computer>DESKTOP-ALICE</Computer>
+    </System>
+    <EventData>
+      <Data Name="QueryName">www.google.com</Data>
+      <Data Name="QueryStatus">0</Data>
+      <Data Name="QueryResults">198.51.100.17</Data>
+      <Data Name="User">CORP\alice</Data>
+    </EventData>
+  </Event>
+</Events>

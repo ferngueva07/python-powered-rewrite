@@ -1,0 +1,54 @@
+{
+  "Findings": [
+    {
+      "SchemaVersion": "2018-10-08",
+      "Id": "arn:aws:securityhub:us-east-1:123456789:subscription/aws-foundational-security-best-practices/v/1.0.0/S3.1/finding/abc001",
+      "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+      "GeneratorId": "aws-foundational-security-best-practices/v/1.0.0/S3.1",
+      "AwsAccountId": "123456789",
+      "Types": [
+        "Software and Configuration Checks/AWS Security Best Practices"
+      ],
+      "CreatedAt": "2024-01-15T09:00:00Z",
+      "UpdatedAt": "2024-01-15T09:00:00Z",
+      "Severity": {
+        "Label": "LOW",
+        "Normalized": 15
+      },
+      "Title": "S3 Block Public Access setting should be enabled",
+      "Description": "S3 bucket does not have block public access enabled but contains no sensitive data",
+      "Resources": [
+        {
+          "Type": "AwsS3Bucket",
+          "Id": "arn:aws:s3:::my-public-website",
+          "Region": "us-east-1"
+        }
+      ]
+    },
+    {
+      "SchemaVersion": "2018-10-08",
+      "Id": "arn:aws:securityhub:us-east-1:123456789:subscription/aws-foundational-security-best-practices/v/1.0.0/CloudTrail.1/finding/abc002",
+      "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+      "GeneratorId": "aws-foundational-security-best-practices/v/1.0.0/CloudTrail.1",
+      "AwsAccountId": "123456789",
+      "Types": [
+        "Software and Configuration Checks/AWS Security Best Practices"
+      ],
+      "CreatedAt": "2024-01-15T09:05:00Z",
+      "UpdatedAt": "2024-01-15T09:05:00Z",
+      "Severity": {
+        "Label": "INFORMATIONAL",
+        "Normalized": 0
+      },
+      "Title": "CloudTrail should be enabled and configured with at least one multi-Region trail",
+      "Description": "CloudTrail is enabled and configured correctly",
+      "Resources": [
+        {
+          "Type": "AwsCloudTrailTrail",
+          "Id": "arn:aws:cloudtrail:us-east-1:123456789:trail/mgmt-trail",
+          "Region": "us-east-1"
+        }
+      ]
+    }
+  ]
+}

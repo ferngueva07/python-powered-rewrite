@@ -1,0 +1,219 @@
+{
+  "value": [
+    {
+      "id": "aab1c2d3-0001-4000-a000-000000000001",
+      "createdDateTime": "2024-03-15T14:02:00Z",
+      "userPrincipalName": "alice.smith@contoso.com",
+      "userId": "user-alice-001",
+      "appDisplayName": "Microsoft 365",
+      "resourceDisplayName": "Microsoft 365",
+      "clientAppUsed": "Browser",
+      "ipAddress": "198.51.100.10",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+      "isInteractive": true,
+      "status": {
+        "errorCode": 0,
+        "failureReason": null
+      },
+      "location": {
+        "city": "Seattle",
+        "state": "Washington",
+        "countryOrRegion": "US",
+        "geoCoordinates": {
+          "latitude": 47.6062,
+          "longitude": -122.3321
+        }
+      },
+      "deviceDetail": {
+        "displayName": "ALICE-LAPTOP-01",
+        "operatingSystem": "Windows 10",
+        "browser": "Chrome 121.0",
+        "isCompliant": true,
+        "isManaged": true,
+        "trustType": "Hybrid Azure AD joined"
+      },
+      "appliedConditionalAccessPolicies": [
+        {
+          "id": "policy-001",
+          "displayName": "Require MFA for external access",
+          "result": "success"
+        }
+      ],
+      "riskLevelAggregated": "none",
+      "riskLevelDuringSignIn": "none",
+      "mfaDetail": {
+        "authMethod": "Microsoft Authenticator app",
+        "authDetail": "Authentication approved"
+      }
+    },
+    {
+      "id": "aab1c2d3-0002-4000-a000-000000000002",
+      "createdDateTime": "2024-03-15T14:09:00Z",
+      "userPrincipalName": "alice.smith@contoso.com",
+      "userId": "user-alice-001",
+      "appDisplayName": "Microsoft 365",
+      "resourceDisplayName": "SharePoint Online",
+      "clientAppUsed": "Browser",
+      "ipAddress": "198.51.100.28",
+      "userAgent": "python-requests/2.31.0",
+      "isInteractive": true,
+      "status": {
+        "errorCode": 0,
+        "failureReason": null
+      },
+      "location": {
+        "city": "Moscow",
+        "state": "Moscow Oblast",
+        "countryOrRegion": "RU",
+        "geoCoordinates": {
+          "latitude": 55.7558,
+          "longitude": 37.6173
+        }
+      },
+      "deviceDetail": {
+        "displayName": "UNKNOWN-DEVICE",
+        "operatingSystem": "Linux",
+        "browser": "python-requests",
+        "isCompliant": false,
+        "isManaged": false,
+        "trustType": null
+      },
+      "appliedConditionalAccessPolicies": [
+        {
+          "id": "policy-001",
+          "displayName": "Require MFA for external access",
+          "result": "failure"
+        }
+      ],
+      "riskLevelAggregated": "high",
+      "riskLevelDuringSignIn": "high",
+      "mfaDetail": null
+    },
+    {
+      "id": "aab1c2d3-0003-4000-a000-000000000003",
+      "createdDateTime": "2024-03-15T14:10:30Z",
+      "userPrincipalName": "alice.smith@contoso.com",
+      "userId": "user-alice-001",
+      "appDisplayName": "Azure Active Directory",
+      "resourceDisplayName": "Azure Active Directory",
+      "clientAppUsed": "Browser",
+      "ipAddress": "198.51.100.28",
+      "userAgent": "python-requests/2.31.0",
+      "isInteractive": false,
+      "status": {
+        "errorCode": 0,
+        "failureReason": null
+      },
+      "location": {
+        "city": "Moscow",
+        "state": "Moscow Oblast",
+        "countryOrRegion": "RU",
+        "geoCoordinates": {
+          "latitude": 55.7558,
+          "longitude": 37.6173
+        }
+      },
+      "deviceDetail": {
+        "displayName": "UNKNOWN-DEVICE",
+        "operatingSystem": "Linux",
+        "browser": "python-requests",
+        "isCompliant": false,
+        "isManaged": false,
+        "trustType": null
+      },
+      "appliedConditionalAccessPolicies": [],
+      "riskLevelAggregated": "high",
+      "riskLevelDuringSignIn": "high",
+      "mfaDetail": null
+    },
+    {
+      "id": "aab1c2d3-0004-4000-a000-000000000004",
+      "createdDateTime": "2024-03-15T14:22:00Z",
+      "userPrincipalName": "bob.jones@contoso.com",
+      "userId": "user-bob-002",
+      "appDisplayName": "Microsoft Teams",
+      "resourceDisplayName": "Microsoft Teams",
+      "clientAppUsed": "Mobile Apps and Desktop clients",
+      "ipAddress": "198.51.100.14",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_3 like Mac OS X) AppleWebKit/605.1.15",
+      "isInteractive": true,
+      "status": {
+        "errorCode": 0,
+        "failureReason": null
+      },
+      "location": {
+        "city": "New York",
+        "state": "New York",
+        "countryOrRegion": "US",
+        "geoCoordinates": {
+          "latitude": 40.7128,
+          "longitude": -74.0060
+        }
+      },
+      "deviceDetail": {
+        "displayName": "Bob-iPhone",
+        "operatingSystem": "iOS 17.3",
+        "browser": "Mobile Safari",
+        "isCompliant": true,
+        "isManaged": true,
+        "trustType": "Azure AD registered"
+      },
+      "appliedConditionalAccessPolicies": [
+        {
+          "id": "policy-001",
+          "displayName": "Require MFA for external access",
+          "result": "success"
+        }
+      ],
+      "riskLevelAggregated": "none",
+      "riskLevelDuringSignIn": "none",
+      "mfaDetail": {
+        "authMethod": "Microsoft Authenticator app",
+        "authDetail": "Authentication approved"
+      }
+    },
+    {
+      "id": "aab1c2d3-0005-4000-a000-000000000005",
+      "createdDateTime": "2024-03-15T14:27:00Z",
+      "userPrincipalName": "bob.jones@contoso.com",
+      "userId": "user-bob-002",
+      "appDisplayName": "Microsoft Teams",
+      "resourceDisplayName": "Microsoft Teams",
+      "clientAppUsed": "Browser",
+      "ipAddress": "198.51.100.13",
+      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "isInteractive": true,
+      "status": {
+        "errorCode": 0,
+        "failureReason": null
+      },
+      "location": {
+        "city": "Bucharest",
+        "state": "Bucharest",
+        "countryOrRegion": "RO",
+        "geoCoordinates": {
+          "latitude": 44.4268,
+          "longitude": 26.1025
+        }
+      },
+      "deviceDetail": {
+        "displayName": "UNKNOWN-LINUX",
+        "operatingSystem": "Linux",
+        "browser": "Chrome 120.0",
+        "isCompliant": false,
+        "isManaged": false,
+        "trustType": null
+      },
+      "appliedConditionalAccessPolicies": [
+        {
+          "id": "policy-001",
+          "displayName": "Require MFA for external access",
+          "result": "failure"
+        }
+      ],
+      "riskLevelAggregated": "medium",
+      "riskLevelDuringSignIn": "medium",
+      "mfaDetail": null
+    }
+  ]
+}

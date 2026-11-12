@@ -1,0 +1,94 @@
+{
+  "value": [
+    {
+      "id": "mfa00001-0000-0000-0000-000000000001",
+      "createdDateTime": "2026-06-07T03:45:00Z",
+      "userDisplayName": "David Kim",
+      "userPrincipalName": "dkim@contoso.com",
+      "userId": "user-dkim",
+      "appDisplayName": "Azure Portal",
+      "resourceDisplayName": "Windows Azure Service Management API",
+      "clientAppUsed": "Other clients",
+      "ipAddress": "198.51.100.11",
+      "userAgent": "python-requests/2.28.0",
+      "isInteractive": false,
+      "conditionalAccessStatus": "failure",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "failure" },
+        { "id": "policy-legacy", "displayName": "Block Legacy Authentication", "result": "failure" }
+      ],
+      "status": { "errorCode": 50074, "failureReason": "Strong Authentication is required." },
+      "deviceDetail": { "displayName": "WIN-HACK-7F3K2", "operatingSystem": "Windows 10", "browser": "Unknown", "isCompliant": false, "isManaged": false, "trustType": "None" },
+      "location": { "city": "Frankfurt", "state": "Hesse", "countryOrRegion": "DE", "geoCoordinates": {} },
+      "riskLevelAggregated": "high", "riskLevelDuringSignIn": "medium",
+      "mfaDetail": { "authMethod": null, "authDetail": "MFA not satisfied" }
+    },
+    {
+      "id": "mfa00001-0000-0000-0000-000000000002",
+      "createdDateTime": "2026-06-07T03:45:30Z",
+      "userDisplayName": "Eve Martinez",
+      "userPrincipalName": "emartinez@contoso.com",
+      "userId": "user-emartinez",
+      "appDisplayName": "Azure Portal",
+      "resourceDisplayName": "Windows Azure Service Management API",
+      "clientAppUsed": "Other clients",
+      "ipAddress": "198.51.100.11",
+      "userAgent": "python-requests/2.28.0",
+      "isInteractive": false,
+      "conditionalAccessStatus": "failure",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "failure" },
+        { "id": "policy-legacy", "displayName": "Block Legacy Authentication", "result": "failure" }
+      ],
+      "status": { "errorCode": 50074, "failureReason": "Strong Authentication is required." },
+      "deviceDetail": { "displayName": "WIN-HACK-7F3K2", "operatingSystem": "Windows 10", "browser": "Unknown", "isCompliant": false, "isManaged": false, "trustType": "None" },
+      "location": { "city": "Frankfurt", "state": "Hesse", "countryOrRegion": "DE", "geoCoordinates": {} },
+      "riskLevelAggregated": "high", "riskLevelDuringSignIn": "medium",
+      "mfaDetail": { "authMethod": null, "authDetail": "MFA not satisfied" }
+    },
+    {
+      "id": "mfa00001-0000-0000-0000-000000000003",
+      "createdDateTime": "2026-06-07T03:46:00Z",
+      "userDisplayName": "Frank Lee",
+      "userPrincipalName": "flee@contoso.com",
+      "userId": "user-flee",
+      "appDisplayName": "Exchange Online",
+      "resourceDisplayName": "Office 365 Exchange Online",
+      "clientAppUsed": "Exchange ActiveSync",
+      "ipAddress": "198.51.100.11",
+      "userAgent": "python-requests/2.28.0",
+      "isInteractive": false,
+      "conditionalAccessStatus": "failure",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "failure" }
+      ],
+      "status": { "errorCode": 53003, "failureReason": "Access has been blocked by Conditional Access policies." },
+      "deviceDetail": { "displayName": "ATTACKER-WS-001", "operatingSystem": "Windows Server 2019", "browser": "Unknown", "isCompliant": false, "isManaged": false, "trustType": "None" },
+      "location": { "city": "Frankfurt", "state": "Hesse", "countryOrRegion": "DE", "geoCoordinates": {} },
+      "riskLevelAggregated": "high", "riskLevelDuringSignIn": "high",
+      "mfaDetail": { "authMethod": null, "authDetail": "MFA denied; user declined the authentication" }
+    },
+    {
+      "id": "mfa00001-0000-0000-0000-000000000004",
+      "createdDateTime": "2026-06-07T03:46:30Z",
+      "userDisplayName": "David Kim",
+      "userPrincipalName": "dkim@contoso.com",
+      "userId": "user-dkim",
+      "appDisplayName": "Azure Portal",
+      "resourceDisplayName": "Windows Azure Service Management API",
+      "clientAppUsed": "Other clients",
+      "ipAddress": "198.51.100.29",
+      "userAgent": "python-requests/2.28.0",
+      "isInteractive": false,
+      "conditionalAccessStatus": "failure",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "failure" }
+      ],
+      "status": { "errorCode": 50076, "failureReason": "Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access." },
+      "deviceDetail": { "displayName": "VM-CLOUD-RUNNER-44", "operatingSystem": "Linux", "browser": "Python Requests", "isCompliant": false, "isManaged": false, "trustType": "None" },
+      "location": { "city": "Moscow", "state": "Moscow", "countryOrRegion": "RU", "geoCoordinates": {} },
+      "riskLevelAggregated": "high", "riskLevelDuringSignIn": "high",
+      "mfaDetail": { "authMethod": null, "authDetail": "MFA not completed" }
+    }
+  ]
+}

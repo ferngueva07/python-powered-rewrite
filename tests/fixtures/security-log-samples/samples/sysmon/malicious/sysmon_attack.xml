@@ -1,0 +1,76 @@
+<Events>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>1</EventID>
+      <TimeCreated SystemTime="2024-01-15T14:30:01.000Z"/>
+      <Computer>DESKTOP-VICTIM</Computer>
+    </System>
+    <EventData>
+      <Data Name="Image">C:\Windows\System32\cmd.exe</Data>
+      <Data Name="CommandLine">cmd.exe /c powershell -enc JABjAGwAaQBlAG4AdA==</Data>
+      <Data Name="User">CORP\jsmith</Data>
+      <Data Name="Hashes">MD5=5D41402ABC4B2A76B9719D911017C592,SHA256=a0f3c4d2e1b5f789012345678901234567890123456789012345678901234567</Data>
+      <Data Name="ParentImage">C:\Windows\explorer.exe</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>3</EventID>
+      <TimeCreated SystemTime="2024-01-15T14:30:30.000Z"/>
+      <Computer>DESKTOP-VICTIM</Computer>
+    </System>
+    <EventData>
+      <Data Name="Image">C:\Temp\beacon.exe</Data>
+      <Data Name="User">CORP\jsmith</Data>
+      <Data Name="SourceIp">10.0.0.50</Data>
+      <Data Name="DestinationIp">198.51.100.25</Data>
+      <Data Name="DestinationPort">4444</Data>
+      <Data Name="Protocol">tcp</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>8</EventID>
+      <TimeCreated SystemTime="2024-01-15T14:32:00.000Z"/>
+      <Computer>DESKTOP-VICTIM</Computer>
+    </System>
+    <EventData>
+      <Data Name="SourceImage">C:\Temp\beacon.exe</Data>
+      <Data Name="TargetImage">C:\Windows\System32\lsass.exe</Data>
+      <Data Name="SourceUser">CORP\jsmith</Data>
+      <Data Name="NewThreadId">1234</Data>
+      <Data Name="StartAddress">0x7FFB12345678</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>10</EventID>
+      <TimeCreated SystemTime="2024-01-15T14:32:05.000Z"/>
+      <Computer>DESKTOP-VICTIM</Computer>
+    </System>
+    <EventData>
+      <Data Name="SourceImage">C:\Temp\mimikatz.exe</Data>
+      <Data Name="TargetImage">C:\Windows\System32\lsass.exe</Data>
+      <Data Name="SourceUser">CORP\jsmith</Data>
+      <Data Name="GrantedAccess">0x1FFFFF</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Sysmon" Guid="{5770385F-C22A-43E0-BF4C-06F5698FFBD9}"/>
+      <EventID>22</EventID>
+      <TimeCreated SystemTime="2024-01-15T14:33:00.000Z"/>
+      <Computer>DESKTOP-VICTIM</Computer>
+    </System>
+    <EventData>
+      <Data Name="QueryName">malware-c2.ru</Data>
+      <Data Name="QueryStatus">0</Data>
+      <Data Name="QueryResults">198.51.100.25</Data>
+      <Data Name="User">CORP\jsmith</Data>
+    </EventData>
+  </Event>
+</Events>

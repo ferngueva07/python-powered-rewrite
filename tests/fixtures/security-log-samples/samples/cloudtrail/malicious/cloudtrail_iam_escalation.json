@@ -1,0 +1,134 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/dev-contractor",
+        "userName": "dev-contractor",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIAIOSFODNN7EXAMPLE"
+      },
+      "eventTime": "2024-01-15T03:12:44Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreatePolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.26",
+      "userAgent": "python-requests/2.28.0",
+      "requestParameters": {
+        "policyName": "FullAdminAccess",
+        "policyDocument": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"*\",\"Resource\":\"*\"}]}"
+      },
+      "responseElements": {
+        "policy": {
+          "policyName": "FullAdminAccess",
+          "arn": "arn:aws:iam::123456789012:policy/FullAdminAccess"
+        }
+      },
+      "eventID": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/dev-contractor",
+        "userName": "dev-contractor",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-01-15T03:13:02Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.26",
+      "userAgent": "python-requests/2.28.0",
+      "requestParameters": {
+        "userName": "dev-contractor",
+        "policyArn": "arn:aws:iam::123456789012:policy/FullAdminAccess"
+      },
+      "responseElements": null,
+      "eventID": "b2c3d4e5-f6a7-8901-bcde-f12345678901"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/dev-contractor",
+        "userName": "dev-contractor",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-01-15T03:13:30Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "DeleteAccountPasswordPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.26",
+      "userAgent": "python-requests/2.28.0",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::123456789012:user/dev-contractor is not authorized to perform: iam:DeleteAccountPasswordPolicy",
+      "requestParameters": null,
+      "responseElements": null,
+      "eventID": "b9c0d1e2-f3a4-5678-9012-bcdef1234567"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/dev-contractor",
+        "userName": "dev-contractor",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-01-15T03:14:18Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.26",
+      "userAgent": "python-requests/2.28.0",
+      "requestParameters": {"bucketName": "prod-customer-data-backup"},
+      "responseElements": null,
+      "eventID": "c3d4e5f6-a7b8-9012-cdef-123456789012"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/dev-contractor",
+        "userName": "dev-contractor",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-01-15T03:15:01Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "ListObjects",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.26",
+      "userAgent": "python-requests/2.28.0",
+      "requestParameters": {"bucketName": "prod-customer-data-backup"},
+      "responseElements": null,
+      "eventID": "d4e5f6a7-b8c9-0123-def0-234567890123"
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/dev-contractor",
+        "userName": "dev-contractor",
+        "accountId": "123456789012"
+      },
+      "eventTime": "2024-01-15T03:17:45Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.26",
+      "userAgent": "python-requests/2.28.0",
+      "requestParameters": {
+        "roleArn": "arn:aws:iam::123456789012:role/OrganizationAccountAccessRole",
+        "roleSessionName": "escalation-session"
+      },
+      "responseElements": {
+        "credentials": {
+          "accessKeyId": "ASIAIOSFODNN7EXAMPLE",
+          "expiration": "2024-01-15T07:17:45Z"
+        }
+      },
+      "eventID": "e5f6a7b8-c9d0-1234-ef01-345678901234"
+    }
+  ]
+}

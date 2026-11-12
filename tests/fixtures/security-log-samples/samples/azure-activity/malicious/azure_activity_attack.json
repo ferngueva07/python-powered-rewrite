@@ -1,0 +1,68 @@
+{
+  "value": [
+    {
+      "caller": "attacker@external.com",
+      "operationName": "Microsoft.Authorization/roleAssignments/write",
+      "resourceId": "/subscriptions/abc123/providers/Microsoft.Authorization/roleAssignments/xyz789",
+      "resourceProviderName": "Microsoft.Authorization",
+      "subscriptionId": "abc123",
+      "status": "Started",
+      "eventTimestamp": "2024-01-15T14:30:00Z",
+      "httpRequest": {
+        "clientIpAddress": "198.51.100.25",
+        "method": "PUT"
+      },
+      "properties": {
+        "requestbody": "{\"Id\":\"xyz789\",\"Properties\":{\"PrincipalId\":\"4f1c2d3e-5a6b-4c7d-8e9f-0a1b2c3d4e5f\",\"PrincipalType\":\"User\",\"RoleDefinitionId\":\"/subscriptions/abc123/providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635\",\"Scope\":\"/subscriptions/abc123\"}}"
+      },
+      "correlationId": "7d2c1b0a-9e8f-4a6b-b5c4-3d2e1f0a9b8c"
+    },
+    {
+      "caller": "attacker@external.com",
+      "operationName": "Microsoft.Authorization/roleAssignments/write",
+      "resourceId": "/subscriptions/abc123/providers/Microsoft.Authorization/roleAssignments/xyz789",
+      "resourceProviderName": "Microsoft.Authorization",
+      "subscriptionId": "abc123",
+      "status": "Succeeded",
+      "eventTimestamp": "2024-01-15T14:30:02Z",
+      "httpRequest": {
+        "clientIpAddress": "198.51.100.25",
+        "method": "PUT"
+      },
+      "properties": {
+        "statusCode": "Created"
+      },
+      "correlationId": "7d2c1b0a-9e8f-4a6b-b5c4-3d2e1f0a9b8c"
+    },
+    {
+      "caller": "attacker@external.com",
+      "operationName": "Microsoft.KeyVault/vaults/accessPolicies/write",
+      "resourceId": "/subscriptions/abc123/resourceGroups/prod-rg/providers/Microsoft.KeyVault/vaults/prod-kv/accessPolicies/add",
+      "resourceProviderName": "Microsoft.KeyVault",
+      "subscriptionId": "abc123",
+      "status": "Succeeded",
+      "eventTimestamp": "2024-01-15T14:31:00Z",
+      "httpRequest": {
+        "clientIpAddress": "198.51.100.25",
+        "method": "DELETE"
+      },
+      "properties": {}
+    },
+    {
+      "caller": "attacker@external.com",
+      "operationName": "Microsoft.Compute/virtualMachines/delete",
+      "resourceId": "/subscriptions/abc123/resourceGroups/prod-rg/providers/Microsoft.Compute/virtualMachines/prod-app-01",
+      "resourceProviderName": "Microsoft.Compute",
+      "subscriptionId": "abc123",
+      "status": "Succeeded",
+      "eventTimestamp": "2024-01-15T14:32:00Z",
+      "httpRequest": {
+        "clientIpAddress": "198.51.100.8",
+        "method": "DELETE"
+      },
+      "properties": {
+        "statusMessage": "VM deleted successfully"
+      }
+    }
+  ]
+}

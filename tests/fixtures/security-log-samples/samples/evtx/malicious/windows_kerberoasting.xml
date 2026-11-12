@@ -1,0 +1,244 @@
+<Events>
+  <!-- Kerberoasting and AS-REP roasting from one workstation, as a domain controller's Security log
+       records them. Field names and order follow Microsoft's event 4768 and 4769 documentation
+       (learn.microsoft.com/.../auditing/event-4768, event-4769); encryption type 0x17 is RC4-HMAC,
+       PreAuthType 0 is "Logon without Pre-Authentication" (Microsoft's Table 5). -->
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4768</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14339</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:02:11.118341700Z" />
+      <EventRecordID>881201</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="TargetSid">S-1-5-21-3457937927-2839227994-823803824-1154</Data>
+      <Data Name="ServiceName">krbtgt</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-502</Data>
+      <Data Name="TicketOptions">0x40810010</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="TicketEncryptionType">0x12</Data>
+      <Data Name="PreAuthType">2</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49702</Data>
+      <Data Name="CertIssuerName" />
+      <Data Name="CertSerialNumber" />
+      <Data Name="CertThumbprint" />
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4768</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14339</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:04:37.552901200Z" />
+      <EventRecordID>881236</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">svc_legacyscan</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="TargetSid">S-1-5-21-3457937927-2839227994-823803824-2311</Data>
+      <Data Name="ServiceName">krbtgt</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-502</Data>
+      <Data Name="TicketOptions">0x40800010</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="TicketEncryptionType">0x17</Data>
+      <Data Name="PreAuthType">0</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49731</Data>
+      <Data Name="CertIssuerName" />
+      <Data Name="CertSerialNumber" />
+      <Data Name="CertThumbprint" />
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4769</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14337</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:05:02.004113600Z" />
+      <EventRecordID>881240</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith@CONTOSO.LOCAL</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="ServiceName">FS01$</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-1601</Data>
+      <Data Name="TicketOptions">0x40810000</Data>
+      <Data Name="TicketEncryptionType">0x12</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49744</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="LogonGuid">{9b1a9a2e-5c31-4b0e-8e1f-2d4c7f0a6b11}</Data>
+      <Data Name="TransmittedServices">-</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4769</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14337</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:06:14.310558900Z" />
+      <EventRecordID>881252</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith@CONTOSO.LOCAL</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="ServiceName">svc_sql</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-2104</Data>
+      <Data Name="TicketOptions">0x40810000</Data>
+      <Data Name="TicketEncryptionType">0x17</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49760</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="LogonGuid">{9b1a9a2e-5c31-4b0e-8e1f-2d4c7f0a6b11}</Data>
+      <Data Name="TransmittedServices">-</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4769</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14337</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:06:14.902117300Z" />
+      <EventRecordID>881253</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith@CONTOSO.LOCAL</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="ServiceName">svc_web</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-2108</Data>
+      <Data Name="TicketOptions">0x40810000</Data>
+      <Data Name="TicketEncryptionType">0x17</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49761</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="LogonGuid">{9b1a9a2e-5c31-4b0e-8e1f-2d4c7f0a6b11}</Data>
+      <Data Name="TransmittedServices">-</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4769</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14337</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:06:15.477402100Z" />
+      <EventRecordID>881254</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith@CONTOSO.LOCAL</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="ServiceName">svc_backup</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-2112</Data>
+      <Data Name="TicketOptions">0x40810000</Data>
+      <Data Name="TicketEncryptionType">0x17</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49762</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="LogonGuid">{9b1a9a2e-5c31-4b0e-8e1f-2d4c7f0a6b11}</Data>
+      <Data Name="TransmittedServices">-</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4769</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14337</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:06:16.120884400Z" />
+      <EventRecordID>881255</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith@CONTOSO.LOCAL</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="ServiceName">svc_sharepoint</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-2116</Data>
+      <Data Name="TicketOptions">0x40810000</Data>
+      <Data Name="TicketEncryptionType">0x17</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49763</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="LogonGuid">{9b1a9a2e-5c31-4b0e-8e1f-2d4c7f0a6b11}</Data>
+      <Data Name="TransmittedServices">-</Data>
+    </EventData>
+  </Event>
+  <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+    <System>
+      <Provider Name="Microsoft-Windows-Security-Auditing" Guid="{54849625-5478-4994-A5BA-3E3B0328C30D}" />
+      <EventID>4769</EventID>
+      <Version>0</Version>
+      <Level>0</Level>
+      <Task>14337</Task>
+      <Opcode>0</Opcode>
+      <Keywords>0x8020000000000000</Keywords>
+      <TimeCreated SystemTime="2024-04-11T13:06:16.731205800Z" />
+      <EventRecordID>881256</EventRecordID>
+      <Channel>Security</Channel>
+      <Computer>DC01.contoso.local</Computer>
+      <Security />
+    </System>
+    <EventData>
+      <Data Name="TargetUserName">jsmith@CONTOSO.LOCAL</Data>
+      <Data Name="TargetDomainName">CONTOSO.LOCAL</Data>
+      <Data Name="ServiceName">svc_crm</Data>
+      <Data Name="ServiceSid">S-1-5-21-3457937927-2839227994-823803824-2120</Data>
+      <Data Name="TicketOptions">0x40810000</Data>
+      <Data Name="TicketEncryptionType">0x17</Data>
+      <Data Name="IpAddress">::ffff:10.0.5.23</Data>
+      <Data Name="IpPort">49764</Data>
+      <Data Name="Status">0x0</Data>
+      <Data Name="LogonGuid">{9b1a9a2e-5c31-4b0e-8e1f-2d4c7f0a6b11}</Data>
+      <Data Name="TransmittedServices">-</Data>
+    </EventData>
+  </Event>
+</Events>

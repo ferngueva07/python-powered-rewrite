@@ -1,0 +1,178 @@
+{
+  "findings": [
+    {
+      "accountId": "123456789012",
+      "arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123/finding/finding001",
+      "createdAt": "2024-01-15T14:32:01Z",
+      "description": "198.51.100.25 is performing SSH brute force attacks against i-0abc123def456.",
+      "id": "finding001",
+      "region": "us-east-1",
+      "severity": 2.0,
+      "title": "198.51.100.25 is performing SSH brute force attacks against i-0abc123def456.",
+      "type": "UnauthorizedAccess:EC2/SSHBruteForce",
+      "updatedAt": "2024-01-15T14:35:00Z",
+      "service": {
+        "action": {
+          "actionType": "NETWORK_CONNECTION",
+          "networkConnectionAction": {
+            "blocked": false,
+            "connectionDirection": "INBOUND",
+            "localPortDetails": {
+              "port": 22,
+              "portName": "SSH"
+            },
+            "protocol": "TCP",
+            "remoteIpDetails": {
+              "ipAddressV4": "198.51.100.25",
+              "city": {
+                "cityName": "Stockholm"
+              },
+              "country": {
+                "countryCode": "SE",
+                "countryName": "Sweden"
+              },
+              "geoLocation": {
+                "lat": 59.3293,
+                "lon": 18.0686
+              },
+              "organization": {
+                "asn": "60068",
+                "asnOrg": "Datacamp Limited",
+                "isp": "Datacamp Limited",
+                "org": "Datacamp Limited"
+              }
+            },
+            "remotePortDetails": {
+              "port": 54321,
+              "portName": "Unknown"
+            }
+          }
+        },
+        "count": 1247,
+        "detectorId": "abc123",
+        "eventFirstSeen": "2024-01-15T14:30:00Z",
+        "eventLastSeen": "2024-01-15T14:35:00Z",
+        "resourceRole": "TARGET",
+        "serviceName": "guardduty"
+      },
+      "resource": {
+        "resourceType": "Instance",
+        "instanceDetails": {
+          "instanceId": "i-0abc123def456"
+        }
+      }
+    },
+    {
+      "accountId": "123456789012",
+      "arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123/finding/finding002",
+      "createdAt": "2024-01-15T14:40:00Z",
+      "description": "EC2 instance i-0abc123def456 is communicating with an IP address that is associated with a known command and control server.",
+      "id": "finding002",
+      "region": "us-east-1",
+      "severity": 8.9,
+      "title": "EC2 instance i-0abc123def456 is querying an IP address associated with a known command and control server.",
+      "type": "Backdoor:EC2/C&CActivity.B",
+      "updatedAt": "2024-01-15T14:42:00Z",
+      "service": {
+        "action": {
+          "actionType": "NETWORK_CONNECTION",
+          "networkConnectionAction": {
+            "blocked": false,
+            "connectionDirection": "OUTBOUND",
+            "localPortDetails": {
+              "port": 49200,
+              "portName": "Unknown"
+            },
+            "protocol": "TCP",
+            "remoteIpDetails": {
+              "ipAddressV4": "198.51.100.8",
+              "city": {
+                "cityName": "Amsterdam"
+              },
+              "country": {
+                "countryCode": "NL",
+                "countryName": "Netherlands"
+              },
+              "geoLocation": {
+                "lat": 52.3676,
+                "lon": 4.9041
+              },
+              "organization": {
+                "asn": "208323",
+                "asnOrg": "M247 Europe SRL",
+                "isp": "M247 Ltd",
+                "org": "M247 Ltd"
+              }
+            },
+            "remotePortDetails": {
+              "port": 4444,
+              "portName": "Unknown"
+            }
+          }
+        },
+        "count": 34,
+        "detectorId": "abc123",
+        "eventFirstSeen": "2024-01-15T14:38:00Z",
+        "eventLastSeen": "2024-01-15T14:42:00Z",
+        "resourceRole": "ACTOR",
+        "serviceName": "guardduty"
+      },
+      "resource": {
+        "resourceType": "Instance",
+        "instanceDetails": {
+          "instanceId": "i-0abc123def456"
+        }
+      }
+    },
+    {
+      "accountId": "123456789012",
+      "arn": "arn:aws:guardduty:us-east-1:123456789012:detector/abc123/finding/finding003",
+      "createdAt": "2024-01-15T15:00:00Z",
+      "description": "API ListBuckets was invoked from IP address 198.51.100.25, which is on a threat list.",
+      "id": "finding003",
+      "region": "us-east-1",
+      "severity": 6.0,
+      "title": "Reconnaissance API ListBuckets was invoked from a known malicious IP address.",
+      "type": "Recon:IAMUser/MaliciousIPCaller",
+      "updatedAt": "2024-01-15T15:05:00Z",
+      "service": {
+        "action": {
+          "actionType": "AWS_API_CALL",
+          "awsApiCallAction": {
+            "api": "ListBuckets",
+            "callerType": "Remote IP",
+            "remoteIpDetails": {
+              "ipAddressV4": "198.51.100.25",
+              "city": {
+                "cityName": "Stockholm"
+              },
+              "country": {
+                "countryCode": "SE",
+                "countryName": "Sweden"
+              },
+              "organization": {
+                "asn": "60068",
+                "asnOrg": "Datacamp Limited"
+              }
+            },
+            "serviceName": "s3.amazonaws.com"
+          }
+        },
+        "count": 847,
+        "detectorId": "abc123",
+        "eventFirstSeen": "2024-01-15T14:50:00Z",
+        "eventLastSeen": "2024-01-15T15:00:00Z",
+        "resourceRole": "TARGET",
+        "serviceName": "guardduty"
+      },
+      "resource": {
+        "resourceType": "AccessKey",
+        "accessKeyDetails": {
+          "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+          "userName": "ci-deploy",
+          "userType": "IAMUser"
+        }
+      }
+    }
+  ]
+}

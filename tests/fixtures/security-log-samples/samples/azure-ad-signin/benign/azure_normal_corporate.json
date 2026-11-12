@@ -1,0 +1,94 @@
+{
+  "value": [
+    {
+      "id": "corp0001-0000-0000-0000-000000000001",
+      "createdDateTime": "2026-06-07T08:30:00Z",
+      "userDisplayName": "Alice Johnson",
+      "userPrincipalName": "alice@contoso.com",
+      "userId": "user-alice",
+      "appDisplayName": "Microsoft Teams",
+      "resourceDisplayName": "Microsoft Teams",
+      "clientAppUsed": "Browser",
+      "ipAddress": "203.0.113.10",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "isInteractive": true,
+      "conditionalAccessStatus": "success",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "success" },
+        { "id": "policy-compliant", "displayName": "Require Compliant Device", "result": "success" }
+      ],
+      "status": { "errorCode": 0, "failureReason": null },
+      "deviceDetail": { "displayName": "ALICE-CORP-LAPTOP", "operatingSystem": "Windows 11", "browser": "Chrome 124.0", "isCompliant": true, "isManaged": true, "trustType": "Hybrid Azure AD joined" },
+      "location": { "city": "New York", "state": "New York", "countryOrRegion": "US", "geoCoordinates": {} },
+      "riskLevelAggregated": "none", "riskLevelDuringSignIn": "none",
+      "mfaDetail": { "authMethod": "Phone app notification", "authDetail": "MFA completed in Azure AD" }
+    },
+    {
+      "id": "corp0001-0000-0000-0000-000000000002",
+      "createdDateTime": "2026-06-07T08:45:00Z",
+      "userDisplayName": "Bob Smith",
+      "userPrincipalName": "bob@contoso.com",
+      "userId": "user-bob",
+      "appDisplayName": "Microsoft 365",
+      "resourceDisplayName": "Microsoft Graph",
+      "clientAppUsed": "Browser",
+      "ipAddress": "203.0.113.11",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+      "isInteractive": true,
+      "conditionalAccessStatus": "success",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "success" }
+      ],
+      "status": { "errorCode": 0, "failureReason": null },
+      "deviceDetail": { "displayName": "BOB-MACBOOK-PRO", "operatingSystem": "MacOS", "browser": "Chrome 124.0", "isCompliant": true, "isManaged": true, "trustType": "Azure AD Joined" },
+      "location": { "city": "Chicago", "state": "Illinois", "countryOrRegion": "US", "geoCoordinates": {} },
+      "riskLevelAggregated": "none", "riskLevelDuringSignIn": "none",
+      "mfaDetail": { "authMethod": "Phone app notification", "authDetail": "MFA completed in Azure AD" }
+    },
+    {
+      "id": "corp0001-0000-0000-0000-000000000003",
+      "createdDateTime": "2026-06-07T09:00:00Z",
+      "userDisplayName": "Carol Davis",
+      "userPrincipalName": "carol@contoso.com",
+      "userId": "user-carol",
+      "appDisplayName": "SharePoint Online",
+      "resourceDisplayName": "Office 365 SharePoint Online",
+      "clientAppUsed": "Browser",
+      "ipAddress": "203.0.113.12",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+      "isInteractive": true,
+      "conditionalAccessStatus": "success",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "success" },
+        { "id": "policy-compliant", "displayName": "Require Compliant Device", "result": "success" }
+      ],
+      "status": { "errorCode": 0, "failureReason": null },
+      "deviceDetail": { "displayName": "CAROL-CORP-WIN11", "operatingSystem": "Windows 11", "browser": "Firefox 123.0", "isCompliant": true, "isManaged": true, "trustType": "Hybrid Azure AD joined" },
+      "location": { "city": "Seattle", "state": "Washington", "countryOrRegion": "US", "geoCoordinates": {} },
+      "riskLevelAggregated": "none", "riskLevelDuringSignIn": "none",
+      "mfaDetail": { "authMethod": "Text message", "authDetail": "MFA completed in Azure AD" }
+    },
+    {
+      "id": "corp0001-0000-0000-0000-000000000004",
+      "createdDateTime": "2026-06-07T09:15:00Z",
+      "userDisplayName": "Dave Wilson",
+      "userPrincipalName": "dwilson@contoso.com",
+      "userId": "user-dwilson",
+      "appDisplayName": "Exchange Online",
+      "resourceDisplayName": "Office 365 Exchange Online",
+      "clientAppUsed": "Browser",
+      "ipAddress": "203.0.113.13",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0",
+      "isInteractive": true,
+      "conditionalAccessStatus": "success",
+      "appliedConditionalAccessPolicies": [
+        { "id": "policy-mfa", "displayName": "Require MFA for All Users", "result": "success" }
+      ],
+      "status": { "errorCode": 0, "failureReason": null },
+      "deviceDetail": { "displayName": "DAVE-CORP-SURFACE", "operatingSystem": "Windows 11", "browser": "Edge 124.0", "isCompliant": true, "isManaged": true, "trustType": "Hybrid Azure AD joined" },
+      "location": { "city": "Boston", "state": "Massachusetts", "countryOrRegion": "US", "geoCoordinates": {} },
+      "riskLevelAggregated": "none", "riskLevelDuringSignIn": "none",
+      "mfaDetail": { "authMethod": "Microsoft Authenticator App", "authDetail": "MFA completed in Azure AD" }
+    }
+  ]
+}

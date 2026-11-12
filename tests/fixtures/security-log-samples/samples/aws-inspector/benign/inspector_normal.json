@@ -1,0 +1,168 @@
+{
+  "findings": [
+    {
+      "awsAccountId": "123456789012",
+      "description": "libcurl cookie injection: an attacker can insert cookies into a program using libcurl if a specific series of conditions are met.",
+      "epss": {
+        "score": 0.00045
+      },
+      "exploitAvailable": "NO",
+      "findingArn": "arn:aws:inspector2:us-east-1:123456789012:finding/0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d01",
+      "firstObservedAt": "2024-01-15T09:00:00Z",
+      "fixAvailable": "YES",
+      "inspectorScore": 3.7,
+      "inspectorScoreDetails": {
+        "adjustedCvss": {
+          "cvssSource": "NVD",
+          "score": 3.7,
+          "scoreSource": "NVD",
+          "scoringVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "version": "3.1"
+        }
+      },
+      "lastObservedAt": "2024-01-15T09:00:00Z",
+      "packageVulnerabilityDetails": {
+        "cvss": [
+          {
+            "baseScore": 3.7,
+            "scoringVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "source": "NVD",
+            "version": "3.1"
+          }
+        ],
+        "referenceUrls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-38546"
+        ],
+        "relatedVulnerabilities": [],
+        "source": "NVD",
+        "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2023-38546",
+        "vendorSeverity": "LOW",
+        "vulnerabilityId": "CVE-2023-38546",
+        "vulnerablePackages": [
+          {
+            "epoch": 0,
+            "fixedInVersion": "8.4.0",
+            "name": "curl",
+            "packageManager": "OS",
+            "version": "7.88.1"
+          }
+        ]
+      },
+      "remediation": {
+        "recommendation": {
+          "text": "None Provided"
+        }
+      },
+      "resources": [
+        {
+          "details": {
+            "awsEc2Instance": {
+              "iamInstanceProfileArn": "arn:aws:iam::123456789012:instance-profile/web-role",
+              "imageId": "ami-0abcdef1234567890",
+              "ipV4Addresses": [
+                "10.0.1.10"
+              ],
+              "ipV6Addresses": [],
+              "launchedAt": "2024-01-02T08:00:00Z",
+              "platform": "UBUNTU_22_04",
+              "subnetId": "subnet-0a1b2c3d",
+              "type": "t3.micro",
+              "vpcId": "vpc-0a1b2c3d"
+            }
+          },
+          "id": "arn:aws:ec2:us-east-1:123456789012:instance/i-0a1b2c3d4e5f60001",
+          "partition": "aws",
+          "region": "us-east-1",
+          "type": "AWS_EC2_INSTANCE"
+        }
+      ],
+      "severity": "LOW",
+      "status": "ACTIVE",
+      "title": "CVE-2023-38546 - curl, libcurl",
+      "type": "PACKAGE_VULNERABILITY",
+      "updatedAt": "2024-01-15T09:00:00Z"
+    },
+    {
+      "awsAccountId": "123456789012",
+      "description": "libcurl cookie injection: an attacker can insert cookies into a program using libcurl if a specific series of conditions are met.",
+      "epss": {
+        "score": 0.00045
+      },
+      "exploitAvailable": "NO",
+      "findingArn": "arn:aws:inspector2:us-east-1:123456789012:finding/0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d02",
+      "firstObservedAt": "2024-01-15T09:00:00Z",
+      "fixAvailable": "YES",
+      "inspectorScore": 3.7,
+      "inspectorScoreDetails": {
+        "adjustedCvss": {
+          "cvssSource": "NVD",
+          "score": 3.7,
+          "scoreSource": "NVD",
+          "scoringVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "version": "3.1"
+        }
+      },
+      "lastObservedAt": "2024-01-15T09:00:00Z",
+      "packageVulnerabilityDetails": {
+        "cvss": [
+          {
+            "baseScore": 3.7,
+            "scoringVector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+            "source": "NVD",
+            "version": "3.1"
+          }
+        ],
+        "referenceUrls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-38546"
+        ],
+        "relatedVulnerabilities": [],
+        "source": "NVD",
+        "sourceUrl": "https://nvd.nist.gov/vuln/detail/CVE-2023-38546",
+        "vendorSeverity": "LOW",
+        "vulnerabilityId": "CVE-2023-38546",
+        "vulnerablePackages": [
+          {
+            "epoch": 0,
+            "fixedInVersion": "8.4.0",
+            "name": "curl",
+            "packageManager": "OS",
+            "version": "7.88.1"
+          }
+        ]
+      },
+      "remediation": {
+        "recommendation": {
+          "text": "None Provided"
+        }
+      },
+      "resources": [
+        {
+          "details": {
+            "awsEc2Instance": {
+              "iamInstanceProfileArn": "arn:aws:iam::123456789012:instance-profile/web-role",
+              "imageId": "ami-0abcdef1234567890",
+              "ipV4Addresses": [
+                "10.0.1.11"
+              ],
+              "ipV6Addresses": [],
+              "launchedAt": "2024-01-02T08:00:00Z",
+              "platform": "UBUNTU_22_04",
+              "subnetId": "subnet-0a1b2c3d",
+              "type": "t3.micro",
+              "vpcId": "vpc-0a1b2c3d"
+            }
+          },
+          "id": "arn:aws:ec2:us-east-1:123456789012:instance/i-0a1b2c3d4e5f60002",
+          "partition": "aws",
+          "region": "us-east-1",
+          "type": "AWS_EC2_INSTANCE"
+        }
+      ],
+      "severity": "LOW",
+      "status": "ACTIVE",
+      "title": "CVE-2023-38546 - curl, libcurl",
+      "type": "PACKAGE_VULNERABILITY",
+      "updatedAt": "2024-01-15T09:00:00Z"
+    }
+  ]
+}

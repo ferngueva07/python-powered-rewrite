@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: If you use these samples, please cite them as below.
+title: Security log samples (paired malicious and benign logs for 50 formats)
+type: dataset
+authors:
+  - name: LogTriage
+    website: https://logtriage.app
+license: CC-BY-4.0
+repository-code: https://github.com/logtriage-cyber/security-log-samples
+url: https://logtriage.app/reference/log-formats/
+keywords:
+  - security logs
+  - detection engineering
+  - sigma
+  - test data
+  - SIEM

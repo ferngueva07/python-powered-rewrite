@@ -1,0 +1,66 @@
+{
+  "Findings": [
+    {
+      "SchemaVersion": "2018-10-08",
+      "Id": "arn:aws:securityhub:us-east-1:123456789:subscription/aws-foundational-security-best-practices/v/1.0.0/IAM.1/finding/abc123",
+      "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+      "GeneratorId": "aws-foundational-security-best-practices/v/1.0.0/IAM.1",
+      "AwsAccountId": "123456789",
+      "Types": [
+        "Software and Configuration Checks/Industry and Regulatory Standards/AWS-Foundational-Security-Best-Practices"
+      ],
+      "CreatedAt": "2024-01-15T14:30:00Z",
+      "UpdatedAt": "2024-01-15T14:30:00Z",
+      "Severity": {
+        "Label": "CRITICAL",
+        "Normalized": 90
+      },
+      "Title": "IAM root user access key should not exist",
+      "Description": "Root user access key detected and actively used",
+      "Remediation": {
+        "Recommendation": {
+          "Text": "Delete root access key immediately"
+        }
+      },
+      "Resources": [
+        {
+          "Type": "AwsIamUser",
+          "Id": "arn:aws:iam::123456789:root",
+          "Region": "us-east-1"
+        }
+      ]
+    },
+    {
+      "SchemaVersion": "2018-10-08",
+      "Id": "arn:aws:securityhub:us-east-1:123456789:subscription/guardduty/finding/def456",
+      "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/guardduty",
+      "GeneratorId": "arn:aws:guardduty:us-east-1:123456789:detector/abc",
+      "AwsAccountId": "123456789",
+      "Types": [
+        "TTPs/Command and Control/Backdoor:EC2-C&CActivity.B"
+      ],
+      "CreatedAt": "2024-01-15T14:35:00Z",
+      "UpdatedAt": "2024-01-15T14:35:00Z",
+      "Severity": {
+        "Label": "HIGH",
+        "Normalized": 80
+      },
+      "Title": "EC2 instance i-0abc123def456789 is querying an IP address associated with a known command and control server.",
+      "Description": "EC2 instance i-0abc123def456789 is communicating with 198.51.100.25, an IP address associated with a known command and control server.",
+      "Resources": [
+        {
+          "Type": "AwsEc2Instance",
+          "Id": "arn:aws:ec2:us-east-1:123456789:instance/i-0abc123def456789",
+          "Region": "us-east-1",
+          "Details": {
+            "AwsEc2Instance": {
+              "IpV4Addresses": [
+                "198.51.100.25"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
