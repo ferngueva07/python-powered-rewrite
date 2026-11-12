@@ -111,9 +111,18 @@ class IsolationForest:
         """Anomaly scores in (0, 1] for every row; near 1 is anomalous."""
         if not self.trees:
             raise RuntimeError("IsolationForest: call fit() first")
-        X = np.ascontiguousarray(X, dtype=np.float64)
+        X = np.asarray(X, dtype=np.float64)
         if X.ndim == 1:
             X = X.reshape(1, -1)
+        if X.shape[0] > 1:
+            # Many logins share the same feature vector; score each distinct vector once.
+            unique, inverse = np.unique(X, axis=0, return_inverse=True)
+            if unique.shape[0] < X.shape[0]:
+                return self._score_rows(unique)[inverse.reshape(-1)]
+        return self._score_rows(X)
+
+    def _score_rows(self, X: np.ndarray) -> np.ndarray:
+        X = np.ascontiguousarray(X)
         n, dims = X.shape
         flat = X.ravel()
         base = np.arange(n, dtype=np.int64) * dims

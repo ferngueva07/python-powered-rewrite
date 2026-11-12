@@ -91,12 +91,21 @@ def import_login_text(text: str, file_name: str):
     return import_login_events(text, file_name)
 
 
+def _js_value(v):
+    """JavaScript null arrives as pyodide.ffi.jsnull; treat it like undefined."""
+    try:
+        from pyodide.ffi import jsnull
+    except ImportError:
+        return v
+    return None if v is jsnull else v
+
+
 @_guard
 def scan_uploads(files_proxy, params_json: str):
     files = []
     for f in files_proxy:
-        data = getattr(f, "data", None)
-        error = getattr(f, "error", None)
+        data = _js_value(getattr(f, "data", None))
+        error = _js_value(getattr(f, "error", None))
         files.append({
             "name": str(f.name),
             "size": int(f.size),

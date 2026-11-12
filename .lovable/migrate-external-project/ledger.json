@@ -2,15 +2,75 @@
   "source": "code-archive (V-main_2.zip, Login Pattern Radar)",
   "goal": "Same look and behavior; analysis logic rewritten in Python running in the browser",
   "capabilities": [
-    {"capability": "Dashboard pages (Overview, Activity, Test a login, Scan files)", "source": "artifacts/login-pattern-radar/src/App.tsx, pages/scan-files.tsx", "outcome": "migrate", "status": "pending", "next_action": "Recreate as TanStack routes with identical markup and CSS"},
-    {"capability": "Styling, fonts, theme toggle", "source": "src/index.css, index.html", "outcome": "migrate", "status": "pending", "next_action": "Copy stylesheet; load fonts via head links"},
-    {"capability": "Login anomaly model (isolation forest, features, probe scoring)", "source": "src/lib/anomaly/*", "outcome": "rewrite in Python", "status": "pending", "next_action": "Port to src/python/lpr/anomaly and verify against original output"},
-    {"capability": "File scanner and security log rules", "source": "src/lib/scanner/*", "outcome": "rewrite in Python", "status": "pending", "next_action": "Port to src/python/lpr/scanner and verify against original output and fixture corpus"},
-    {"capability": "Sample data generator, CSV import/export", "source": "src/lib/anomaly/sample-data.ts, csv.ts", "outcome": "rewrite in Python", "status": "pending", "next_action": "Port and verify identical sample data"},
-    {"capability": "Browser local storage of events, settings, theme", "source": "App.tsx", "outcome": "migrate", "status": "pending", "next_action": "Keep same storage keys"},
-    {"capability": "Regression tests (scanner + 114-sample corpus)", "source": "scripts/tests/*", "outcome": "port to Python unittest", "status": "pending", "next_action": "Port tests and fixtures"},
-    {"capability": "Optional Express API server, mockup sandbox, shared DB packages", "source": "artifacts/api-server, artifacts/mockup-sandbox, lib/*", "outcome": "not migrated", "status": "accepted", "next_action": "README states the frontend does not use them"},
-    {"capability": "Database, auth, secrets, payments, webhooks", "source": "none used by the app", "outcome": "not applicable", "status": "accepted", "next_action": "None"},
-    {"capability": "Hosting (Netlify/Render static)", "source": "netlify.toml, render.yaml", "outcome": "replace with Lovable publish", "status": "pending", "next_action": "User publishes from Lovable"}
+    {
+      "capability": "Dashboard pages (Overview, Activity, Test a login, Scan files)",
+      "source": "artifacts/login-pattern-radar/src/App.tsx, pages/scan-files.tsx",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "None; screenshots of 5 states identical to the original (0 differing pixels)"
+    },
+    {
+      "capability": "Styling, fonts, theme toggle",
+      "source": "src/index.css, index.html",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "None"
+    },
+    {
+      "capability": "Login anomaly model (isolation forest, features, probe scoring)",
+      "source": "src/lib/anomaly/*",
+      "outcome": "rewrite in Python",
+      "status": "verified",
+      "next_action": "None; output identical to original on 4 settings combos and 5 probes"
+    },
+    {
+      "capability": "File scanner and security log rules",
+      "source": "src/lib/scanner/*",
+      "outcome": "rewrite in Python",
+      "status": "verified",
+      "next_action": "None; identical output on all 114 corpus files plus 25 edge-case files"
+    },
+    {
+      "capability": "Sample data generator, CSV import/export",
+      "source": "src/lib/anomaly/sample-data.ts, csv.ts",
+      "outcome": "rewrite in Python",
+      "status": "verified",
+      "next_action": "None"
+    },
+    {
+      "capability": "Browser local storage of events, settings, theme",
+      "source": "App.tsx",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "None"
+    },
+    {
+      "capability": "Regression tests (scanner + 114-sample corpus)",
+      "source": "scripts/tests/*",
+      "outcome": "port to Python unittest",
+      "status": "verified",
+      "next_action": "None"
+    },
+    {
+      "capability": "Optional Express API server, mockup sandbox, shared DB packages",
+      "source": "artifacts/api-server, artifacts/mockup-sandbox, lib/*",
+      "outcome": "not migrated",
+      "status": "accepted",
+      "next_action": "README states the frontend does not use them"
+    },
+    {
+      "capability": "Database, auth, secrets, payments, webhooks",
+      "source": "none used by the app",
+      "outcome": "not applicable",
+      "status": "accepted",
+      "next_action": "None"
+    },
+    {
+      "capability": "Hosting (Netlify/Render static)",
+      "source": "netlify.toml, render.yaml",
+      "outcome": "replace with Lovable publish",
+      "status": "pending",
+      "next_action": "Publish from Lovable when ready"
+    }
   ]
 }

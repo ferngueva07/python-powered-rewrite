@@ -127,16 +127,15 @@ async function boot(): Promise<Engine> {
       unwrap(fn.scoreProbe(eventsJson(events), JSON.stringify(params), JSON.stringify(probe))),
     importLoginText: (text, fileName) => unwrap(fn.importLoginText(text, fileName)),
     async scanUploads(files, params) {
-      const payload: { name: string; size: number; data: Uint8Array | null; error: string | null }[] = [];
+      const payload: { name: string; size: number; data?: Uint8Array; error?: string }[] = [];
       for (const file of files) {
         try {
           const data = new Uint8Array(await file.slice(0, MAX_SCAN_BYTES).arrayBuffer());
-          payload.push({ name: file.name, size: file.size, data, error: null });
+          payload.push({ name: file.name, size: file.size, data });
         } catch (err) {
           payload.push({
             name: file.name,
             size: file.size,
-            data: null,
             error: err instanceof Error ? err.message : "The file could not be read.",
           });
         }

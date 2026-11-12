@@ -27,3 +27,13 @@ npm run dev
 - TypeScript
 - React
 - Tailwind CSS
+
+## Login Pattern Radar
+
+A browser-based dashboard for exploring login activity, investigating unusual sign-ins, and scanning files for suspicious patterns.
+
+- `src/python/lpr/` — the analysis engine, written in Python (anomaly model, demo data, CSV import/export, file and security-log scanner). It runs in the browser with [Pyodide](https://pyodide.org); nothing is sent to a server.
+- `src/components/radar/`, `src/routes/` — the pages (Overview, Activity, Test a login, Scan files).
+- `tests/python/` — regression tests, including the LogTriage security-log sample corpus (CC BY 4.0, see `tests/fixtures/security-log-samples/LICENSE`).
+
+Run the Python tests with `python3 -m unittest discover -s tests/python` (or `bun run test:python`).
